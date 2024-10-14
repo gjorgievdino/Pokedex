@@ -1,5 +1,5 @@
 const base_URL = "https://pokeapi.co/api/v2/pokemon/";
-const batchSize = 11;
+const batchSize = 20;
 let currentBatch = 0;
 const maxPokemonId = 649;
 const unovaDexCount = 156;
