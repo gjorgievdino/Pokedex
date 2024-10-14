@@ -1,0 +1,56 @@
+.searchBox { 
+    background: #58c4dd; 
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px; 
+    position: relative;
+}
+
+.searchBox:hover > .searchInput,
+.searchBox:focus-within > .searchInput { 
+    width: 240px; 
+    padding: 0 6px; 
+    color: white; 
+}
+
+.searchButton { 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.4s; 
+    cursor: pointer; 
+    border: 0; 
+}
+
+.searchInput { 
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px; 
+    width: 0px; 
+    font-family: 'Pokemon BW', sans-serif; 
+    font-size: 18px; 
+}
+
+@media screen and (max-width: 620px) { 
+    .searchBox:hover > .searchInput, 
+    .searchBox:focus-within > .searchInput { 
+        width: 140px; 
+        padding: 0 6px; 
+    }
+}
+
+.searchBox input::placeholder { 
+    color: white; 
+    font-family: 'Pokemon BW', sans-serif; 
+    font-size: 18px; 
+}

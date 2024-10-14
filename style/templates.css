@@ -1,0 +1,13 @@
+@font-face { font-family: 'Pokemon BW'; src: url('../fonts/pokemon-bw.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+.loading-screen { display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #e0f7fa;; 
+    color: black; z-index: 1000; justify-content: center; align-items: center; text-align: center; font-size: 1.8em; flex-direction: column; }
+.loading-fact { margin: 0; padding: 0; }
+.load-more-button { display: block; margin: 20px auto; padding: 10px 20px; border: none; border-radius: 5px; background-color: #007bff; color: white; 
+    font-size: 16px; cursor: pointer; }
+.load-more-button:hover { background-color: #0056b3; }
+.sprite-container {position: absolute; top: 0px; right: 10px; display: flex; flex-direction: column; gap: 5px;} 
+.corner-sprite {width: 96px; height: auto; display: block; transition: transform 0.5s ease-in-out;} 
+.shiny-button {background: none; border: none; cursor: pointer; margin: 10px; padding: 0; position: absolute; top: 52px; left: 12px;} 
+.shiny-button img {width: 32px; height: 32px; transition: transform 0.5s ease-in-out;} 
+.shiny-button img:hover {transform: scale(1.3); transition: transform 0.5s ease-in-out;} 
+.scale-up {transform: scale(1.4);}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino's Unova Pokédex</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/templates.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/search.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="mainHeader">
+                <div class="responsive-header">
+                    <a href="pokedex.html"><img class="headerLogo" src="images/unovaleaguesymbol.png" alt="Unova League Symbol"></a>
+                    <div class="searchBox">
+                        <input type="text" class="searchInput" placeholder="Search Pokémon" oninput="filterPokemonList()">
+                        <button class="searchButton">
+                            <img style="height: 20px; color: white;" src="images/search.png" alt="Search">
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <img class="headerText" src="images/headerlogo.png" alt="Header Logo">
+                </div>
+            </div>
+        </header>
+
+        <div id="pokemonDisplay" class="pokemon-container"></div>
+
+        <div id="loadingScreen" class="loading-screen">
+            <p>Loading... <br></p>
+            <p id="loadingFact" class="loading-fact"></p>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <button id="loadMoreButton" class="loadPokemon" onclick="loadMorePokemon()">Uncover More Pokémon</button>
+        </div>
+    </div>
+
+    <div id="pokemon-modal" class="modal" style="display: none;">
+        <div class="modal-overlay" onclick="closePokemonModal()"></div>
+        <div class="modal-content">
+            <div id="modal-id" class="pokemonID"></div>
+            <p id="modal-name" class="pokemon-name"></p>
+            <div class="pokemon-details">
+                <img id="modal-image" src="" alt="" class="pokemon-image">
+                <div id="modal-types" class="pokemon-types"></div>
+            </div>
+
+            <button class="nextPokemon" onclick="showNextPokemon()">
+                <img class="nextButton" style="transform: scaleX(-1);" src="images/previous.png" alt="Next Pokemon">
+            </button>
+            <button class="previousPokemon" onclick="showPreviousPokemon()">
+                <img class="previousButton" src="images/previous.png" alt="Previous Pokemon">
+            </button>
+            
+
+            <div id="modal-pokedexentry" class="pokedex-entry"></div>
+            <div id="modal-stats" class="pokemon-stats">
+                <span id="hp-stat" class="pokemon-stat">HP</span>
+                <span id="attack-stat" class="pokemon-stat">Attack</span>
+                <span id="defense-stat" class="pokemon-stat">Defense</span>
+                <span id="special_attack-stat" class="pokemon-stat">Sp. Attack</span>
+                <span id="special_defense-stat" class="pokemon-stat">Sp. Defense</span>
+                <span id="speed-stat" class="pokemon-stat">Speed</span>
+            </div>
+
+            <div class="pokemon-measurements">
+
+                    <div class="pokemonHeight">
+                        <span id="pokemon-height"></span>
+                    </div>
+                    <div class="pokemonWeight">
+                        <span id="pokemon-weight"></span>
+                    </div>
+                </div>
+
+            <button class="close-modal" onclick="closePokemonModal()">×</button>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h4 style="margin: 0; padding-bottom: 16px; text-align: center;">
+                Designed and coded by Dino Gjorgiev<br><br>Developer Akademie 2024
+            </h4>
+            <p style="margin: 0; text-align: center;">
+                All Pokémon names and images are used under free license. Pokémon and all related characters are © and ™ by Nintendo, Game Freak, and The Pokémon Company.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
